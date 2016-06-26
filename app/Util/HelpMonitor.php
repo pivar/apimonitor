@@ -23,14 +23,16 @@ class HelpMonitor {
 
 		$baseApi =array(
 									array('path' =>'http://jsonplaceholder.typicode.com/',
-										'endpoints' => array('posts/1','users/3')),
+										'endpoints' => array('posts/1','users/3','sillytest')),
 									array('path' =>'http://api.postcodes.io/postcodes/',
-										'endpoints' => array('OX49 5NU','46129'))
+										'endpoints' => array('OX49 5NU','NE30 1DP','XXXX')),
+									array('path'=>'https://api.mailtest.in/v1/',
+										'endpoints' => array('gmail.com', 'abb.com'))
 								);
 		try {
 			$apiResponse_arr; //can be used for some more data display
 			for($j=0; $j<count($baseApi); $j++){
-				for($i=0; $i<count($baseApi[$j]); $i++){
+				for($i=0; $i<count($baseApi[$j]['endpoints']); $i++){
 						$posts = self::get($baseApi[$j]['path'], $baseApi[$j]['endpoints'][$i]);
 							if ($posts) {
 				 				$apiResponse_arr[]=$posts;
