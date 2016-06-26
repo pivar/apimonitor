@@ -1,4 +1,4 @@
-statusboard:
+apimonitor:
   build: docker/php
   volumes:
     - ./:/var/www/html
