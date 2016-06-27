@@ -53,13 +53,13 @@
 				);
 			}
 
-			var mailboxes = null;
+			var monitorLinks = null;
 			if (typeof this.state.data.map !== 'undefined') {
-				mailboxes = this.state.data.map(function(mailbox) {
+				monitorLinks = this.state.data.map(function(monitorlink) {
 					return (
 						<div class="status-green border-color" >
-						<span className="name">{mailbox.api}</span>
-						<span className="component-status">{mailbox.status =='KO' ? <i className="fa fa-exclamation-triangle" title='Something wrong with API'></i> : mailbox.status}</span>
+						<span className="name">{monitorlink.api}</span>
+						<span className="component-status">{monitorlink.status =='KO' ? <i className="fa fa-exclamation-triangle" title='Something wrong with API'></i> : monitorlink.status}</span>
 						</div>
 					);
 				});
@@ -68,37 +68,11 @@
 				<div className="component-inner-container status-green">
 					{loading}
 					<div className="component-inner-container border-color">
-						{mailboxes}
+						{monitorLinks}
 					</div>
 				</div>
 			);
 		}
 	});
-
-	// App.Views.Monitor.Hour = React.createClass({
-	// 	render: function() {
-	// 		var users = this.props.users.map(function(user) {
-	// 			return (
-	// 				<App.Views.Monitor.User key={user.id} user={user} />
-	// 			);
-	// 		});
-	// 		return (
-	// 			<li className={'monitor-hour monitor-hour-' + this.props.hour + ' total-' + (this.props.users.length > 4 ? 'multiple' : this.props.users.length)}>
-	// 				{users}
-	// 			</li>
-	// 		);
-	// 	}
-	// });
-
-	// App.Views.Monitor.User = React.createClass({
-	// 	render: function() {
-	// 		return (
-	// 				<div className="monitor-user-info">
-	// 					<span className="monitor-user-name">{this.props.user.api}</span>
-	// 					<span className="monitor-user-local-time">Status: {this.props.user.status}</span>
-	// 				</div>
-	// 		);
-	// 	}
-	// });
 
 })(App);

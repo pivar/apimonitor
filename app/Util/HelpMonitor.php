@@ -25,9 +25,9 @@ class HelpMonitor {
 									array('path' =>'http://jsonplaceholder.typicode.com/',
 										'endpoints' => array('posts/1','users/3','sillytest')),
 									array('path' =>'http://api.postcodes.io/postcodes/',
-										'endpoints' => array('OX49 5NU','NE30 1DP','XXXX')),
+										'endpoints' => array('OX49 5NU','XXXX')),
 									array('path'=>'https://api.mailtest.in/v1/',
-										'endpoints' => array('gmail.com', 'abb.com'))
+										'endpoints' => array('gmail.com'))
 								);
 		try {
 			$apiResponse_arr; //can be used for some more data display
