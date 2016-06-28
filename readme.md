@@ -17,3 +17,7 @@
 Under controller apicontroller.php calling Util/HelpMonitor which has array for configuration of API with their paths and endpoints. You can add your public api there and check it out. OAuth mechanism is there but not yet implemented, you can add as per your own choice. Also you can create other helper functions.
 
 React does all magic behind so no worries you just need to check controller only ;)
+
+### Note
+more detailed integration can be found here https://github.com/gilbitron/Statusboard
+my codebase is derived from above as per use cas
